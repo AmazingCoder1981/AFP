@@ -1,14 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
-<meta charset="UTF-8">
-<title>AFP Hub</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AFP Hub</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>AFP Hub (MVP)</h1>
-<button onclick="loadCompetitions()">Carregar Competições</button>
-<ul id="list"></ul>
-<script src="app.js"></script>
+  <div class="container">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">AF Porto</p>
+        <h1>AFP Hub</h1>
+        <p class="subtitle">Competições, jogos, classificações e marcadores num só local.</p>
+      </div>
+      <button id="loadBtn" class="primary-btn">Carregar Competições</button>
+    </header>
+
+    <div id="status" class="status">Pronto para carregar dados.</div>
+
+    <main class="layout">
+      <section class="panel left-panel">
+        <div class="panel-header">
+          <h2>Competições</h2>
+          <span id="competitionCount" class="badge">0</span>
+        </div>
+        <div id="competitionList" class="competition-list empty-state">
+          Carrega as competições para começar.
+        </div>
+      </section>
+
+      <section class="panel right-panel">
+        <div id="competitionDetail" class="empty-detail">
+          <h2>Detalhe da competição</h2>
+          <p>Seleciona uma competição para ver jogos, classificação e marcadores.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
