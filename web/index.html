@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AFP Hub - Competições e Resultados</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>AFP Hub</h1>
+      <p>
+        Centro único para resultados, classificações, jogos e marcadores das
+        competições da Associação de Futebol do Porto.
+      </p>
+
+      <section class="card">
+        <h2>Filtros</h2>
+        <form id="filters">
+          <label>
+            Association ID
+            <input type="number" id="associationId" value="232" />
+          </label>
+          <label>
+            Season ID
+            <input type="number" id="seasonId" value="105" />
+          </label>
+          <button type="submit">Carregar Competições</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Competições AFP</h2>
+        <div id="status">Sem dados carregados.</div>
+        <ul id="competitions"></ul>
+      </section>
+
+      <section class="card">
+        <h2>API disponível</h2>
+        <ul>
+          <li><code>/api/competitions?associationId=232&seasonId=105</code></li>
+          <li><code>/api/games?competitionId=...</code></li>
+          <li><code>/api/standings?competitionId=...</code></li>
+          <li><code>/api/scorers?competitionId=...</code></li>
+          <li><code>/api/fpf?path=/Competition/...</code> (proxy genérico)</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
