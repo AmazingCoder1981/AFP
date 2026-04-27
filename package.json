@@ -1,0 +1,12 @@
+{
+  "name": "afp-competitions-scraper",
+  "version": "1.0.0",
+  "description": "Full-stack app to scrape and browse A.F. Porto competitions across seasons",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "scrape": "node src/server.js --scrape-once"
+  }
+}

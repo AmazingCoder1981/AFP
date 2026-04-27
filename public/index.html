@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A.F. Porto Competitions</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>A.F. Porto Competitions Dashboard</h1>
+      <p>Data source: resultados.fpf.pt (cached in SQLite)</p>
+      <button id="refreshBtn">Refresh Now</button>
+      <p id="status"></p>
+    </header>
+
+    <section class="filters">
+      <label>Season
+        <select id="seasonFilter">
+          <option value="">All</option>
+        </select>
+      </label>
+
+      <label>Sport
+        <select id="sportFilter">
+          <option value="">All</option>
+        </select>
+      </label>
+
+      <label>Gender
+        <select id="genderFilter">
+          <option value="">All</option>
+        </select>
+      </label>
+
+      <label>Age Group
+        <select id="ageFilter">
+          <option value="">All</option>
+        </select>
+      </label>
+
+      <label class="search">Competition name
+        <input id="searchFilter" type="text" placeholder="Search by name" />
+      </label>
+    </section>
+
+    <section>
+      <p id="count"></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Season</th>
+              <th>Sport</th>
+              <th>Gender</th>
+              <th>Age Group</th>
+              <th>Association</th>
+              <th>URL</th>
+              <th>Last Scraped</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
